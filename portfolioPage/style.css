@@ -1,0 +1,153 @@
+* {
+    font-family: "Kanit", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #cb39; */
+}
+
+.ul_nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.li_nav {
+    padding: 10px;
+}
+
+.header_img {
+    background: rgba(0, 0, 0, 0.7) url(./mountain.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 200px;
+    border-radius: 50%;
+}
+
+.avatar_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 140px;
+    color: #da5c55;
+}
+
+.avatar_p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 180px;
+    color: white;
+}
+
+.aboutme_back {
+    background-color: #202434;
+    height: 600px;
+}
+
+.img_aboutme {
+    height: 400px;
+}
+
+.div_img_aboutme {
+    padding: 100px 100px 100px 200px;
+}
+
+.aboutme_back {
+    display: flex;
+}
+
+.aboutme {
+    padding-top: 100px;
+    padding-right: 200px;
+}
+
+.line_aboutme {
+    border: 0;
+    height: 3px;
+    margin: 0;
+    width: 50px;
+    background: #da5c55;
+}
+
+.discover {
+    color: #da5c55;
+    margin: 0px;
+}
+
+.aboutme_text {
+    color: white;
+    margin: 10px 0px 5px 0px;
+}
+
+.paragraph_aboutme {
+    color: white;
+    margin-top: 50px;
+    /* margin: 10px 0px 5px 0px; */
+}
+
+.border_aboutme {
+    margin-top: 50px;
+    border: 2px solid #da5c55;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    margin: 20px 0px 20px 80px;
+    color: white;
+}
+
+.right {
+    margin: 20px 80px 20px 0px;
+    color: white;
+}
+
+.skill {
+    height: 500px;
+    background-color: #3a3556;
+}
+
+.skill {
+    padding: 100px 100px 100px 200px;
+}
+
+.what_ido {
+    margin: 0px;
+    color: #da5c55;
+}
+
+.my_skill {
+    margin: 10px 0px 5px 0px;
+    color: white;
+}
+
+.card_skill {
+    display: flex;
+}
+
+.card01,
+.card02,
+.card03 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 80px;
+    height: 300px;
+    width: 500px;
+    background-color: #da5c55;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> ขยาย form.html 3 KB
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- <script src="script.js"></script> -->
+    </head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        label {
+            font-size: 1.4rem;
+        }
+        
+        input {
+            padding: 2% 2%;
+            font-size: 1.25rem;
+        }
+        
+        button {
+            padding: 1.5%;
+            font-size: 1.25rem;
+            border: none;
+            background-color: transparent;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: red;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        
+        .contact_container {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(26, 43, 109, 1);
+            padding: 4%;
+            width: 800px;
+            border: 4px solid black;
+            border-radius: 7px;
+        }
+        
+        .name_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .inp_row {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        
+        .fname_container,
+        .lname_container {
+            width: 45%;
+        }
+        
+        .email_inp {
+            width: auto;
+        }
+        
+        .btn_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+
+    <body>
+        <main>
+            <form class="contact_container" action="" id="my_form">
+                <h1 style="text-align: center">My Form</h1>
+                <div class="name_container">
+                    <div class="inp_row fname_container">
+                        <label for="">First Name *</label>
+                        <input type="text" name="" id="fisrtName" />
+                    </div>
+                    <div class="inp_row lname_container">
+                        <label for="">Last Name *</label>
+                        <input type="text" name="" id="lastName" />
+                    </div>
+                </div>
+                <div class="inp_row email_container">
+                    <label for="">Email *</label>
+                    <input class="email_inp" type="text" name="" id="email" />
+                </div>
+                <div class="inp_row message_container">
+                    <label for="">Message</label>
+                    <!-- <input type="text" name="" id="" /> -->
+                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="btn_container">
+                    <button type="submit" onclick="myFunction()">Submit to us</button>
+                </div>
+            </form>
+        </main>
+    </body>
+    <script>
+        function myFunction() {
+            var fisrtName = document.getElementById("fisrtName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            //alert("firstName is: " + fisrtName + "\n" + "lastName is: " + lastName)
+            //alert(`firstName is: ${fisrtName} \n lastName is: ${lastName} \n email is: ${email} \n message is: ${message}`);
+            alert("test ")
+        }
+    </script>
+
+    </html>
