@@ -1,92 +1,159 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+html {
+    color: #6cacc5;
 }
 
 body {
-    background: #EAEBEC;
-}
-
-.container {
-    width: 400px;
-    margin: auto;
-}
-
-.calc-body {
-    width: 275px;
-    margin: auto;
-    min-height: 400px;
-    border: solid 1px #3A4655;
-    box-shadow: 0 8px 50px -7px black;
-}
-
-.calc-screen {
-    background: #3A4655;
-    width: 100%;
-    height: 150px;
-    padding: 20px;
-}
-
-.calc-operation {
-    text-align: right;
-    color: #727B86;
-    font-size: 21px;
-    padding-bottom: 10px;
-    border-bottom: dotted 1px;
-}
-
-.calc-typed {
-    margin-top: 20px;
-    font-size: 45px;
-    text-align: right;
-    color: #fff;
-}
-
-.calc-button-row {
-    width: 100%;
-    background: #3C4857;
-}
-
-.button {
-    width: 25%;
-    background: #425062;
-    color: #fff;
-    padding: 20px;
-    display: inline-block;
-    font-size: 25px;
+    color: #014b68;
+    font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 5em 0 2em;
     text-align: center;
-    vertical-align: middle;
-    margin-right: -4px;
-    border-right: solid 2px #3C4857;
-    border-bottom: solid 2px #3C4857;
-    transition: all 0.2s ease-in-out;
 }
 
-.button.l {
-    color: #AEB3BA;
-    background: #404D5E;
+h1 {
+    font-weight: 300;
+    margin: 0;
 }
 
-.button.c {
-    color: #D95D4E;
-    background: #404D5E;
+.calculator {
+    font-size: 28px;
+    margin: 0 auto;
+    width: 10em;
 }
 
-.button:hover {
-    background: #E0B612;
-    /* transform: rotate(5deg); */
+.viewer {
+    color: #c97874;
+    float: left;
+    line-height: 3em;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 7.5em;
+    height: 3em;
 }
 
-.button.c:hover {
-    background: #D95D4E;
+button {
+    border: 0;
+    background: rgba(42, 50, 113, 0.28);
+    color: #095f81;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 2em;
+    height: 2em;
+    transition: all 0.5s;
+}
+
+#clear {
+    background: #cf4942cc;
     color: white;
 }
 
-.button.l:hover {
-    background: #E0B612;
-    color: #fff;
+#clear:hover {
+    background: black;
+    color: white;
 }
 
-.blink-me {
-    color: #E0B612;
+button:hover {
+    background: rgba(63, 102, 176, 0.5);
+}
+
+h1:hover {
+    color: #dd0b00;
+}
+
+.reset {
+    background: rgba(201, 120, 116, 0.28);
+    color: #c97874;
+    font-weight: 400;
+    margin-left: -77px;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: -20em;
+    left: 50%;
+    width: auto;
+    height: auto;
+}
+
+
+/* Animations */
+
+
+/* Values that appear onclick */
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Division by zero animation */
+
+@keyframes broken {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    5% {
+        transform: rotate(5deg);
+    }
+    15% {
+        transform: rotate(-5deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    70% {
+        transform: translate3d(0, 2000px, 0);
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, -2000px, 0);
+    }
+}
+
+
+/* Reset button fadein */
+
+@keyframes fadein {
+    0% {
+        top: 20em;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 420px) {
+    .calculator {
+        width: 12em;
+    }
+    .viewer {
+        width: 8.5em;
+    }
+    button {
+        margin: 0.5em;
+    }
 }
